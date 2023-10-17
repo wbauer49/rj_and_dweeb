@@ -1,9 +1,25 @@
-.list_div {
-    background-color: yellow;
+.background {
+    background-image: url('background.png');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.header {
+    color: white;
+    font-size: 30px;
+    align: center;
+    filter: drop-shadow(8px 8px rgba(200, 200, 200, 0.3));
+}
+
+.list_container {
+    margin-left: 10%;
+}
+.list_item {
+    margin-top: 20px;
 }
 .list_img {
-    max-width: 20%;
-    max-height: 20%;
+    max-width: 15%;
+    max-height: 15%;
 }
 
 .view_div {

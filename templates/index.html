@@ -5,16 +5,16 @@
     <title>RJ and Dweeb</title>
     <link rel="stylesheet" href="{{ url_for('static', filename=('style.css')) }}">
 </head>
-<body>
-    {% for project in projects %}
-        <div class="list_div">
-            <a href="view/{{ project }}">
-                <h1>
-                    <img class="list_img" src="{{ url_for('static', filename=('projects/' + project + '.png')) }}">
-                    {{ projects[project] }}
-                </h1>
-            </a>
-        </div>
-    {% endfor %}
+<body class="background">
+    <div class="list_container">
+        <h1 class="header"> Projects </h1>
+        {% for project in projects %}
+            <div class="list_item">
+                <a href="view/{{ project.name }}">
+                    <img class="list_img" src="{{ url_for('static', filename=('projects/' + project.name + '.png')) }}">
+                </a>
+            </div>
+        {% endfor %}
+    </div>
 </body>
 </html>
