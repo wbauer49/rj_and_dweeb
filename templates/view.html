@@ -5,9 +5,10 @@
     <title>{{ project.title }}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename=('style.css')) }}">
 </head>
-<body>
+<body style="background-color: {{ project.background_color }};">
     <div class="view_div">
-    <a href="/">home</a><br>
+        <a class="view_banner" href="/">home</a>&nbsp;&nbsp;&nbsp;
+        <a class="view_banner" href="{{ project.get_next().name }}">next</a><br>
         <img class="view_img" src="{{ url_for('static', filename=('projects/' + project.name + '.png')) }}">
     </div>
 </body>
