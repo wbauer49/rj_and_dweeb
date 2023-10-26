@@ -4,12 +4,28 @@
     <meta charset="UTF-8">
     <title>{{ project.title }}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename=('style.css')) }}">
+    <script>
+        function zoomIn() {
+            img = document.getElementById("img");
+            img.width *= 2;
+            img.height *= 2;
+        }
+        function zoomOut() {
+            img = document.getElementById("img");
+            img.width /= 2;
+            img.height /= 2;
+        }
+    </script>
 </head>
 <body style="background-color: {{ project.background_color }};">
-    <div class="view_div">
+    <div class="view_div" style="float: left;">
         <a class="view_banner" href="/">home</a>&nbsp;&nbsp;&nbsp;
         <a class="view_banner" href="{{ project.get_next().name }}">next</a><br>
-        <img class="view_img" src="{{ url_for('static', filename=('projects/' + project.name + '.png')) }}">
+        <img class="view_img" id="img" src="{{ url_for('static', filename=('projects/' + project.name + '.png')) }}">
+    </div>
+    <div class="zoom_div">
+        <button class="zoom_button" onclick="zoomIn()"> + </button><br>
+        <button class="zoom_button" onclick="zoomOut()"> - </button>
     </div>
 </body>
 </html>

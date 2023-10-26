@@ -18,5 +18,5 @@ PROJECT_LIST = [
             background_color="rgb(150, 150, 150)"),
     Project("bald_guy", title="Bald Guy"),
     Project("beb", background_color="rgb(77, 71, 69)"),
-    Project("lady2", title="Lady #2", background_color="rgb(62, 62, 67)"),
+    Project("lady2", title="Lady #2", background_color="rgb(60, 61, 71)"),
 ]
